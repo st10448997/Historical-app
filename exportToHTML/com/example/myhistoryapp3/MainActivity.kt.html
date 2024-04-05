@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.myhistoryapp3</span>
+
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.widget.Button</span>
+<span class="s1">import android.widget.EditText</span>
+<span class="s1">import android.widget.TextView</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span>
+
+        <span class="s0">val </span><span class="s1">txtInfor = findViewById&lt;TextView&gt;(R.id.txtInfor)</span>
+        <span class="s0">val </span><span class="s1">txtResults = findViewById&lt;TextView&gt;(R.id.txtResults)</span>
+        <span class="s0">val </span><span class="s1">editText = findViewById&lt;EditText&gt;(R.id.editText)</span>
+        <span class="s0">val </span><span class="s1">btnCalculate = findViewById&lt;Button&gt;(R.id.btnCalculate)</span>
+        <span class="s0">val </span><span class="s1">btnClear = findViewById&lt;Button&gt;(R.id.btnClear)</span>
+
+
+        <span class="s1">btnCalculate.setOnClickListener {</span>
+            <span class="s0">val </span><span class="s1">history = editText.text.toString().toInt()</span>
+
+            <span class="s2">/* if ((history == null)) 
+           { 
+             txtResults.text = &quot;Invalid Input &gt; Please enter a valid number&quot; 
+ 
+            }*/</span>
+            <span class="s0">var </span><span class="s1">age = </span><span class="s3">&quot; &quot;</span>
+            <span class="s0">if </span><span class="s1">(history == </span><span class="s4">20</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Andrew Sibusiso Zondo was an Umkhonto we Sizwe operative.He detonated a bomb at Sanlam centre in Amanzimtoti on 23 December 1985 killing five people&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">22</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Solomon Kalushi Mahlangu was a South African freedom fighter,struggle activist and operative of the African National congress militant wing , Umkhontho we Sizwe&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">30</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Steven Biko was born in Tylden, Eastern Cape South Africa in 1946.As a medical student,he founded a black student organisation in 1969 and created a national 'black consciousness' movement . the movement's aim was to combat racism and the South African apartheid government &quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">41</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;David Bambatha Maphgumzana Sibeko was known as the 'malcolm x of South Africa' and begin his political career as a journalist for the black South African magazine Drum&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">44</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Vuyisile Mini was a trade unionist, Umkhonto we Sizwe activist ; singer and one of the first African National congress member to be executed bt apartheid government&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">51</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Chris Hani,born Martin Thembisile Hani SSA,SBS,CLS,DMG,MMS,was the leader of the South African communist party and chief of staff of Umkhonto we Sizwe the wing of the African National Congress&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">53</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Robert Sobukwe founded the Pan Africanist congress in 1959.He was imprisoned from 1960 - 1969. &quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">75</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Olive Reginald Kaizana Tambo was a South African anti-apartheid politician and activist who served as President of the African National congress from 1967 to 1991&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">90</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Desmond Tutu was a South African Anglican bishop and theologian,known for his work as an anti-apartheid and human right activist&quot;</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(history == </span><span class="s4">91</span><span class="s1">) {</span>
+                <span class="s1">age =</span>
+                    <span class="s3">&quot;Peter Sexford Magubane was a South African photographer and anti-apartheid activist. He was also the personal photograher  of Nelson Mandela&quot;</span>
+            <span class="s1">}</span>
+            <span class="s1">txtResults.text = </span><span class="s3">&quot;</span><span class="s0">$</span><span class="s1">age</span><span class="s3">&quot;</span>
+        <span class="s1">}</span>
+        <span class="s1">btnClear.setOnClickListener {</span>
+            <span class="s1">editText.text.clear()</span>
+            <span class="s1">txtResults.text = </span><span class="s3">&quot; &quot;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
